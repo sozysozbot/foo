@@ -1,0 +1,10 @@
+<script>
+function convert(txt)
+{
+	return txt.replace(/th/g,"l").replace(/ch/g,"c").replace(/([aeiou])\1/,"$1q").replace(/([yszbktnmwrldjfphgc])\1/,"v$1")
+}
+</script>
+
+<textarea rows="10" cols="40" id="a"></textarea>
+<input type="button" onclick="document.getElementById('b').value = convert(document.getElementById('a').value)" value="-&gt;">
+<textarea rows="10" cols="40" id="b" readonly="readonly"></textarea>
